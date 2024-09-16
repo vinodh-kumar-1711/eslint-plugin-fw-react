@@ -5,7 +5,7 @@ ESLint plugin to enforce custom rules for our React applications.
 ## Installation
 
 ```sh
-pnpm install eslint-plugin-fw-react --save-dev
+pnpm add -D eslint-plugin-fw-react
 ```
 
 ## Usage
