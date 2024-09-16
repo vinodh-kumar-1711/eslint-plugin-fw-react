@@ -1,0 +1,39 @@
+{
+  "name": "eslint-plugin-fw-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "exports": "./lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha tests/tailwind-class-suggestion.test.js"
+  },
+  "author": "Vinodh Kumar Manickam <vinodhkumar.manickam@freshworks.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^8.57.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.25.1",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "eslint-plugin-eslint-plugin": "^6.2.0",
+    "mocha": "^10.7.3",
+    "prettier": "^3.3.3"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.57.0"
+  },
+  "engines": {
+    "node": "^20.13.1"
+  },
+  "packageManager": "pnpm@9.4.0"
+}
