@@ -14,7 +14,17 @@ const ruleTester = new RuleTester({
 
 ruleTester.run('tailwind-class-suggestion', rule, {
   valid: [
-    { code: 'const customClass="ps-4";' },
+    {
+      code: `
+        export const Test = () => {
+          return (
+            <>
+              <span className="ps-4">Hello world</span>
+            </>
+          );
+        };
+      `,
+    },
     { code: 'const customClass="pe-4"' },
     { code: 'const customClass="ms-2";' },
     { code: 'const customClass="me-2";' },
@@ -22,42 +32,22 @@ ruleTester.run('tailwind-class-suggestion', rule, {
   invalid: [
     {
       code: 'const customClass="pl-4";',
-      errors: [
-        {
-          message:
-            "Use 'ps', 'pe', 'ms', 'me' instead of 'pl', 'pr', 'ml', 'mr' for Tailwind CSS classes.",
-        },
-      ],
+      errors: [{ message: rule.meta.messages.tailwindClassSuggestion }],
       output: 'const customClass="ps-4";',
     },
     {
       code: 'const customClass="pr-4";',
-      errors: [
-        {
-          message:
-            "Use 'ps', 'pe', 'ms', 'me' instead of 'pl', 'pr', 'ml', 'mr' for Tailwind CSS classes.",
-        },
-      ],
+      errors: [{ message: rule.meta.messages.tailwindClassSuggestion }],
       output: 'const customClass="pe-4";',
     },
     {
       code: 'const customClass="ml-4";',
-      errors: [
-        {
-          message:
-            "Use 'ps', 'pe', 'ms', 'me' instead of 'pl', 'pr', 'ml', 'mr' for Tailwind CSS classes.",
-        },
-      ],
+      errors: [{ message: rule.meta.messages.tailwindClassSuggestion }],
       output: 'const customClass="ms-4";',
     },
     {
       code: 'const customClass="mr-4";',
-      errors: [
-        {
-          message:
-            "Use 'ps', 'pe', 'ms', 'me' instead of 'pl', 'pr', 'ml', 'mr' for Tailwind CSS classes.",
-        },
-      ],
+      errors: [{ message: rule.meta.messages.tailwindClassSuggestion }],
       output: 'const customClass="me-4";',
     },
   ],

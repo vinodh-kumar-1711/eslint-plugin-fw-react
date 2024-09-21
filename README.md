@@ -20,3 +20,16 @@ Add `fw-react` to the plugins section of your `.eslintrc` configuration file. Th
   }
 }
 ```
+
+OR
+
+You can extend our recommended config
+
+```json
+{
+  "extends": [
+    // ...
+    "plugin:fw-react/recommended"
+  ]
+}
+```
