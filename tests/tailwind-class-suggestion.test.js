@@ -27,7 +27,11 @@ ruleTester.run('tailwind-class-suggestion', rule, {
     },
     { code: 'const customClass="pe-4"' },
     { code: 'const customClass="ms-2";' },
-    { code: 'const customClass="me-2";' },
+    // This is to ensure that the rule does not throw an error when the text starts with 'pl', 'pr', 'ml', 'mr' but is not a Tailwind CSS class
+    { code: 'const customClass="plain";' },
+    { code: 'const customClass="pray";' },
+    { code: 'const customClass="mlm";' },
+    { code: 'const customClass="mrts";' },
   ],
   invalid: [
     {

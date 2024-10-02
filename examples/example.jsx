@@ -6,6 +6,7 @@ import ValidEmptyStateImg from 'src/assets/images/empty-state.svg';
 const InvalidComponent = () => {
   return (
     <div>
+      <span className="ps">Padding</span>
       <span className="pl-4">Left padding</span>
       <span className="pr-4">Right padding</span>
       <span className="ml-4">Left margin</span>
