@@ -43,7 +43,14 @@ module.exports = [
     rules: {
       'fw-react/tailwind-class-suggestion': 'warn',
       'fw-react/svg-import': 'warn',
-      'fw-react/no-bare-string': 'warn',
+      'fw-react/no-bare-string': [
+        'error',
+        {
+          allowlist: [],
+          globalAttributes: [],
+          elementAttributes: {},
+        },
+      ],
     },
   },
 ];

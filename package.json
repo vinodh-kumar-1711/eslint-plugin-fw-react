@@ -13,7 +13,7 @@
     "eslint-plugin"
   ],
   "scripts": {
-    "lint": "eslint --ext .jsx,.svg examples/",
+    "lint": "eslint .",
     "test": "mocha tests/*.js"
   },
   "author": "Vinodh Kumar Manickam <vinodhkumar.manickam@freshworks.com>",
