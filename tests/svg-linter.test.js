@@ -19,9 +19,15 @@ ruleTester.run('svg-linter', rule, {
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           viewBox="0 0 8 6"
-          fill="currentColor"
+          fill="none"
         >
           <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M3.67544 5.02956C3.36302"
+            fill="currentColor"
+          />
+           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M3.67544 5.02956C3.36302"
