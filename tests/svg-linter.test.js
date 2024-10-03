@@ -40,20 +40,39 @@ ruleTester.run('svg-linter', rule, {
           fill="currentColor"
           width="12px"
           height="12px"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M3.67544 5.02956C3.36302"
-            fill="inherit"
-          />
-        </svg>
+        ></svg>
       `,
-      errors: [
-        {
-          message: rule.meta.messages.avoidHeightWidth,
-        },
-      ],
+      errors: [{ message: rule.meta.messages.avoidHeightWidth }],
+    },
+    {
+      code: `
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 8 6"
+          fill="black"
+        ></svg>
+      `,
+      errors: [{ message: rule.meta.messages.useHTMLColor }],
+    },
+    {
+      code: `
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          fill="currentColor"
+        ></svg>
+      `,
+      errors: [{ message: rule.meta.messages.mandatoryViewBox }],
+    },
+    {
+      code: `
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M3.67544 5.02956C3.36302"
+          fill="#cccc"
+        />
+      `,
+      errors: [{ message: rule.meta.messages.useHTMLColor }],
     },
   ],
 });

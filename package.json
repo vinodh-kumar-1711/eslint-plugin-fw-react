@@ -26,7 +26,6 @@
     "@babel/preset-env": "^7.25.4",
     "@babel/preset-react": "^7.24.7",
     "eslint-plugin-eslint-plugin": "^6.2.0",
-    "eslint-plugin-html": "^8.1.2",
     "mocha": "^10.7.3",
     "prettier": "^3.3.3"
   },

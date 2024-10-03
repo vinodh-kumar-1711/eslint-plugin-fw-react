@@ -2,16 +2,20 @@
 // Import the ESLint plugin locally
 const fwReactPlugin = require('./lib');
 const eslintPlugin = require('eslint-plugin-eslint-plugin');
-const html = require('eslint-plugin-html');
 
 module.exports = [
   eslintPlugin.configs['flat/recommended'],
   {
-    files: ['**/*.html', '**/*.svg'],
-    plugins: { html, 'fw-react': fwReactPlugin },
-    settings: {
-      'html/html-extensions': ['.html', '.svg'], // Process both .html and .svg files
+    files: ['**/*.svg'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        ecmaFeatures: { jsx: true },
+        sourceType: 'module',
+      },
     },
+    plugins: { 'fw-react': fwReactPlugin },
     rules: {
       'fw-react/tailwind-class-suggestion': 'warn',
       'fw-react/svg-linter': 'warn',

@@ -1,19 +1,14 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 8 6"
-  className="ps-4"
-  fill="currentColor"
->
+<svg xmlns="http://www.w3.org/2000/svg" className="pl-4" fill="black">
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M3.67544 5.02956C3.36302 5.34198 2.85649 5.34198 2.54407 5.02956L0.916439 3.40193C0.691835 3.17733 0.691835 2.81317 0.916439 2.58857C1.14104 2.36396 1.5052 2.36396 1.7298 2.58857L3.92311 4.78188L3.67544 5.02956Z"
-    fill="inherit"
+    fill="#ccc"
   />
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M2.29917 4.78201C2.74838 5.23121 3.47669 5.23121 3.9259 4.78201L7.08332 1.62459C7.30792 1.39998 7.30792 1.03583 7.08332 0.811222C6.85871 0.586619 6.49456 0.586618 6.26995 0.811222L2.29917 4.78201Z"
-    fill="inherit"
+    fill="#bbb"
   />
 </svg>
