@@ -19,6 +19,7 @@ module.exports = [
     rules: {
       'fw-react/tailwind-class-suggestion': 'warn',
       'fw-react/svg-linter': 'warn',
+      'fw-react/monochromatic-svg-icon': 'warn',
     },
   },
   {

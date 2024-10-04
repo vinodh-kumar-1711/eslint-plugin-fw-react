@@ -1,5 +1,5 @@
 const { RuleTester } = require('eslint');
-const rule = require('../lib/rules/svg-linter');
+const rule = require('../lib/rules/monochromatic-svg-icon');
 
 const ruleTester = new RuleTester({
   parser: require.resolve('@babel/eslint-parser'),
@@ -12,14 +12,14 @@ const ruleTester = new RuleTester({
   },
 });
 
-ruleTester.run('svg-linter', rule, {
+ruleTester.run('monochromatic-svg-icon', rule, {
   valid: [
     {
       code: `
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           viewBox="0 0 8 6"
-          fill="black"
+          fill="none"
         >
           <path
             fill-rule="evenodd"
@@ -43,21 +43,21 @@ ruleTester.run('svg-linter', rule, {
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           viewBox="0 0 8 6"
-          fill="currentColor"
-          width="12px"
-          height="12px"
+          fill="black"
         ></svg>
       `,
-      errors: [{ message: rule.meta.messages.avoidHeightWidth }],
+      errors: [{ message: rule.meta.messages.useHTMLColor }],
     },
     {
       code: `
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          fill="currentColor"
-        ></svg>
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M3.67544 5.02956C3.36302"
+          fill="#cccc"
+        />
       `,
-      errors: [{ message: rule.meta.messages.mandatoryViewBox }],
+      errors: [{ message: rule.meta.messages.useHTMLColor }],
     },
   ],
 });
